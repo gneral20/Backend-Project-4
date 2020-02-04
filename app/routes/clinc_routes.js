@@ -34,7 +34,7 @@ router.get("/clincs/:clincId", requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Clinc.findById(req.params.clincId)
     .then(clinc => {
-      requireOwnership(req, clinc);
+      // requireOwnership(req, clinc);
       res.status(200).json({
         clinc: clinc
       });
